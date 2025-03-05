@@ -40,13 +40,14 @@ img {
 .grid-container {
   width: 90%;
   max-width: 1200px;
-  height:auto;
+  max-height:90%;
   border: 1px solid orangered;
   border-radius: 1rem;
   box-shadow: 0px 1px 19px rgba(0, 0, 0, 0.5);
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 1px;
+  overflow-x: auto;
 }
 
 .box {
