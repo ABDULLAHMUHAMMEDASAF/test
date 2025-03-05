@@ -46,6 +46,8 @@ img {
   height: auto;
   object-fit: cover;
   border-radius: 1rem;
+  image-rendering: -webkit-optimize-contrast;
+  
 }
 
 .img-container {
@@ -66,7 +68,8 @@ img {
 }
 
 .box {
-  font-weight: 600;
+ display: flex;
+ align-items: stretch;
 }
 
 /***************************************************************************/
