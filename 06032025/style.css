@@ -70,8 +70,8 @@ a {
 
 h2{
   grid-column:span 12;
-  color: darkblue;
-  text-decoration: uppercase;
+  color: orange;
+  text-transform: uppercase;
 }
 
 .grid-container {
