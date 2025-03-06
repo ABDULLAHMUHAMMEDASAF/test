@@ -68,8 +68,7 @@ a {
   font-weight: 600;
 }
 
-h2{
-  grid-column:span 12;
+h3{
   color: orange;
   text-transform: uppercase;
 }
@@ -127,7 +126,9 @@ header {
     }
   }
 }
-
+main{
+  grid-column:span 12
+}
 footer {
   grid-column: span 12;
   .footer-container {
