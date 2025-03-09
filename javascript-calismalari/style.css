@@ -34,7 +34,8 @@ body {
 
 h1 {
   display: inline-block;
-  font-size: 5rem;
+  font-size: 4rem;
+  margin-bottom: 1rem;
 }
 
 .container {
@@ -44,7 +45,8 @@ h1 {
   padding: 2rem;
   width: 90vw;
   max-width: 90%;
-  height: 60rem;
+  height: 20rem;
+  max-height: 60rem;
   position: relative;
   display: flex;
   align-items: center;
