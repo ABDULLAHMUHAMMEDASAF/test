@@ -1,0 +1,221 @@
+:root {
+  --primary-bcg-color: #0e0d19;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  background-color: var(--primary-bcg-color);
+  color: #dddfe8;
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  display: inline-block;
+  font-size: 5rem;
+}
+
+.container {
+  background-color: var(--primary-bcg-color);
+  font-size: 4rem;
+  border-radius: 1rem;
+  padding: 2rem;
+  width: 90vw;
+  max-width: 90%;
+  height: 60rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 16px 1px rgb(49, 48, 48);
+}
+
+.container::before,
+.container::after {
+  position: absolute;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 100%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  background: conic-gradient(from var(--angle), transparent 75%, darkgrey);
+  box-sizing: unset;
+  padding: 0.3rem;
+  border-radius: 1rem;
+  animation: spin 25s linear infinite;
+}
+
+.container::after {
+  filter: blur(2rem);
+}
+
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
+#start {
+  appearance: none;
+  outline: none;
+  border: 1px solid darkgoldenrod;
+  cursor: pointer;
+  font-size: 2rem;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  color: #dddfe8;
+  background: linear-gradient(to top, #0e0d19, #303030);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 1rem;
+  svg {
+    display: inline-block;
+    fill: #dddfe8;
+    height: 32px;
+    width: 32px;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#nav {
+  user-select: none;
+  cursor: pointer;
+  width: 50px;
+  height: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#nav .slice {
+  width: 100%;
+  height: 3px;
+  border-radius: 3px;
+  background-color: darkgray;
+  transition: all 0.5s ease-in-out;
+  transform-origin: left center;
+  margin-bottom: 1rem;
+}
+#nav .slice:nth-child(2) {
+  width: 75%;
+}
+#nav .slice:last-child {
+  margin-bottom: 0;
+  width: 50%;
+}
+
+.slice:last-child {
+  background-color: red;
+  margin-bottom: 0;
+}
+
+#toggle-nav:checked + #nav {
+  /* position: absolute; */
+  transform: rotate(360deg);
+  .slice {
+    background-color: red;
+  }
+}
+
+#toggle-nav:checked + #nav .slice:nth-child(1) {
+  width: 100%;
+  transform: rotate(45deg) translate(2px, -8px); /* Sağ üst tarafa kayma */
+}
+
+#toggle-nav:checked + #nav .slice:nth-child(2) {
+  opacity: 0;
+}
+
+#toggle-nav:checked + #nav .slice:nth-child(3) {
+  width: 100%;
+  transform: rotate(-45deg) translate(2px, 8px); /* Sol alt tarafa kayma */
+}
+
+.result {
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.result::before {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: lightgray;
+  top: 0;
+  opacity: 0;
+  left: -200%;
+  position: absolute;
+  z-index: -1;
+  transition: all 0.5s ease-in-out;
+}
+
+.result.active::before {
+  opacity: 1;
+  left: 0;
+}
+
+button {
+  appearance: none;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: #303030;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 1.5rem;
+  width: 100px;
+  margin-top: 1rem;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 518ms ease-in-out;
+}
+
+button:hover {
+  box-shadow: 0 1px 9px 3px darkgray;
+  transform: scale(1.1);
+}
