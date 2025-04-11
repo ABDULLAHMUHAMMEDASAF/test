@@ -24,6 +24,7 @@ body {
   position: relative;
   display: grid;
   grid-template-rows: 1fr 1fr;
+  place-items: center;
 }
 
 .container {
@@ -33,6 +34,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 10px;
+  max-width: 90%;
 }
 
 .first-dot,
