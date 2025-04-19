@@ -42,7 +42,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 9px;
+  gap: 3px;
 }
 
 .dot {
@@ -63,12 +63,12 @@ body {
 
 @keyframes fade {
   from {
-    transform: translateY(0px) scale(0.5);
+    transform: translateY(0px) scale(0.3);
     background-color: crimson;
   }
 
   to {
-    transform: translateY(-10rem) scale(1.7);
+    transform: translateY(-10rem) scale(1.5);
     box-shadow: 0 2px 4px 4px lightblue;
     background-color: blue;
   }
@@ -76,11 +76,11 @@ body {
 
 @keyframes fade2 {
   from {
-    transform: translateY(0px) scale(0.5);
+    transform: translateY(0px) scale(0.3);
     background-color: crimson;
   }
   to {
-    transform: translateY(-10rem) scale(1.7);
+    transform: translateY(-10rem) scale(1.5);
     box-shadow: 0 2px 4px 4px lightblue;
     background-color: blue;
   }
