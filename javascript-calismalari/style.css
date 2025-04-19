@@ -322,7 +322,7 @@ body::before {
 /* Küçük Telefonlar */
 @media (max-width: 480px) {
   html {
-    font-size: 62.5%; /* 1rem = 10px */
+    font-size: 56.25%; /* 1rem = 9px */
   }
 }
 
